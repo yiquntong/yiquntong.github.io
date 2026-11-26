@@ -108,17 +108,37 @@ nav a { padding-block: 0.3rem; color: var(--green); font-size: 0.94rem; }
 
 .profile {
   display: grid;
-  grid-template-columns: minmax(13rem, 17rem) minmax(0, 1fr);
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: center;
+  grid-template-columns: clamp(11rem, 24vw, 17rem) minmax(0, 36rem);
+  grid-template-areas:
+    "portrait affiliation"
+    "portrait credentials"
+    "portrait biography"
+    "portrait contact";
+  column-gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
   padding-block: clamp(2rem, 5vw, 3.75rem);
 }
 
-.portrait { display: block; width: 100%; height: auto; }
-.introduction { max-width: 36rem; }
-.introduction > * + * { margin-top: 0.9rem; }
-.documents p + p { margin-top: 0.15rem; }
-.contact { font-style: normal; }
+.portrait { grid-area: portrait; display: block; width: 100%; height: auto; }
+.affiliation { grid-area: affiliation; }
+.credentials, .emails { display: flex; flex-wrap: wrap; gap: 0.1rem 1rem; }
+.credentials {
+  grid-area: credentials;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.biography { grid-area: biography; margin-top: 1.1rem; }
+.biography p + p { margin-top: 0.5rem; }
+.contact {
+  grid-area: contact;
+  margin-top: 1.1rem;
+  color: var(--muted);
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+.emails { margin-bottom: 0.25rem; }
 
 .research {
   padding-block: 2rem 2.75rem;
@@ -165,16 +185,21 @@ footer {
   font-size: 0.94rem;
 }
 
-@media (max-width: 44rem) {
+@media screen and (max-width: 44rem) {
   .shell { width: min(35rem, calc(100% - 2.5rem)); }
   .masthead-inner { column-gap: 1rem; padding-block: 1rem; }
   nav { column-gap: 1rem; }
   .profile {
-    grid-template-columns: 1fr;
-    gap: 1.4rem;
-    padding-block: 1.75rem;
+    grid-template-columns: minmax(0, 1fr) clamp(5rem, 24vw, 7.5rem);
+    grid-template-areas:
+      "affiliation portrait"
+      "credentials credentials"
+      "biography biography"
+      "contact contact";
+    column-gap: 1rem;
+    padding-block: 1.5rem;
   }
-  .portrait { width: min(13rem, 65%); }
+  .credentials { margin-top: 0.5rem; }
   .abstract summary { padding-block: 0.5rem; }
 }
 
