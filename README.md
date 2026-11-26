@@ -11,6 +11,6 @@ This academic homepage is a static site. Open `index.html` in a browser to previ
 3. In **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, select the branch and **/(root)**, and save.
 4. When the deployment finishes, open **Visit site** on the Pages settings screen.
 
-Edits pushed to the publishing branch update the site. The CV PDF and its LaTeX source are in `cv/`. The research statement links to OneDrive.
+Edits pushed to the publishing branch update the site. The CV PDF and its LaTeX source are in `cv/`.
 
 The CV builds with pdfLaTeX. The Chinese name uses the TeX Live packages `cjk` and `arphic`.
