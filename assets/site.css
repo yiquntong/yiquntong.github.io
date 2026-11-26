@@ -167,7 +167,7 @@ footer {
 
 @media (max-width: 44rem) {
   .shell { width: min(35rem, calc(100% - 2.5rem)); }
-  .masthead-inner { padding-block: 1rem; }
+  .masthead-inner { column-gap: 1rem; padding-block: 1rem; }
   nav { column-gap: 1rem; }
   .profile {
     grid-template-columns: 1fr;
