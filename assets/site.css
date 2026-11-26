@@ -53,7 +53,7 @@ a {
 
 a:hover { color: #083e60; text-decoration-thickness: 2px; }
 
-a:focus-visible {
+a:focus-visible, summary:focus-visible {
   outline: 3px solid var(--link);
   outline-offset: 4px;
 }
@@ -138,6 +138,16 @@ article + article { margin-top: 2.25rem; }
 h3 { color: var(--ink); font-size: 1.32rem; }
 h3 a { text-decoration-color: #90afbf; }
 .credit { margin-top: 0.25rem; color: var(--muted); }
+.abstract { margin-top: 0.35rem; }
+.abstract summary {
+  width: fit-content;
+  padding: 0.2rem 0.5rem 0.2rem 0;
+  color: var(--link);
+  cursor: pointer;
+}
+.abstract summary:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+.abstract p { margin-top: 0.35rem; }
+
 .presentations {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -147,8 +157,6 @@ h3 a { text-decoration-color: #90afbf; }
 }
 .presentations dt { font-weight: 700; }
 .presentations dd { margin: 0; }
-.summary { margin-top: 0.8rem; }
-.summary em { color: var(--ink); }
 
 footer {
   padding-block: 1.1rem 1.8rem;
@@ -167,6 +175,7 @@ footer {
     padding-block: 1.75rem;
   }
   .portrait { width: min(13rem, 65%); }
+  .abstract summary { padding-block: 0.5rem; }
 }
 
 @media print {
@@ -177,6 +186,8 @@ footer {
   .profile { grid-template-columns: 8rem 1fr; padding-block: 1rem; }
   .portrait { width: 100%; }
   .research { padding-block: 1rem; }
+  .abstract::details-content { content-visibility: visible; }
+  .abstract summary { display: none; }
   h2, h3, h4 { break-after: avoid; }
   a { color: inherit; }
 }
