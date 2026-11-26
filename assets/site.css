@@ -12,6 +12,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Noto Sans CJK SC";
+  src: url("fonts/noto-sans-sc-name.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+7AE5, U+7FA4, U+9038;
+}
+
 :root {
   color-scheme: light;
   --ink: #1d302c;
@@ -86,6 +94,15 @@ h1 {
   letter-spacing: -0.035em;
 }
 
+.chinese-name {
+  display: inline-block;
+  margin-inline-start: 0.2em;
+  font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.72em;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
 nav { display: flex; flex-wrap: wrap; gap: 0.15rem 1.5rem; }
 nav a { padding-block: 0.3rem; color: var(--green); font-size: 0.94rem; }
 
@@ -99,9 +116,7 @@ nav a { padding-block: 0.3rem; color: var(--green); font-size: 0.94rem; }
 
 .portrait { display: block; width: 100%; height: auto; }
 .introduction { max-width: 36rem; }
-.introduction h2 { color: var(--ink); font-size: clamp(1.5rem, 3vw, 2rem); }
 .introduction > * + * { margin-top: 0.9rem; }
-.introduction .bio { font-size: 1.1875rem; line-height: 1.55; }
 .documents p + p { margin-top: 0.15rem; }
 .contact { font-style: normal; }
 

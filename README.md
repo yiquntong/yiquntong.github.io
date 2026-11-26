@@ -10,3 +10,5 @@ This academic homepage is a static site. Open `index.html` in a browser to previ
 4. When the deployment finishes, open **Visit site** on the Pages settings screen.
 
 Edits pushed to the publishing branch update the site. The CV PDF and its LaTeX source are in `cv/`. The research statement and linked papers use the author's original OneDrive links.
+
+The CV builds with pdfLaTeX. The Chinese name uses the TeX Live packages `cjk` and `arphic`.
