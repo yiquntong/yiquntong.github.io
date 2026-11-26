@@ -1,0 +1,131 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[letterpaper,left=1in,right=1in,top=0.93in,bottom=0.88in,headheight=15pt,headsep=13pt,footskip=27pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\hypersetup{pdftitle={Yiqun Tong | Curriculum Vitae},pdfauthor={Yiqun Tong},
+            pdflang={en-US},pdfdisplaydoctitle=true}
+
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setcounter{secnumdepth}{0}
+\linespread{1.07}
+\renewcommand{\arraystretch}{1.05}
+\raggedright
+\raggedbottom
+\urlstyle{same}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{16pt plus 1pt minus 1pt}{5pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Yiqun Tong}
+\fancyhead[R]{\small Curriculum Vitae}
+\fancyfoot[L]{\footnotesize Updated November 2026}
+\fancyfoot[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{firstpage}{\fancyhead{}}
+
+% Two columns for entries with dates. The description wraps independently.
+\newcommand{\datedentry}[2]{%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{1em}}r@{}}
+    #1 & #2
+  \end{tabularx}\par
+}
+\newenvironment{entries}{%
+  \begin{itemize}[label={},leftmargin=1.25em,itemindent=-1.25em,
+                  itemsep=5pt,topsep=0pt,parsep=0pt,partopsep=0pt]
+}{\end{itemize}}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+{\fontsize{25}{29}\selectfont\bfseries Yiqun Tong}\par
+\vspace{5pt}
+{\small
+Room 304, Glorious Sun Building, Yan'an Road Campus, Donghua University\par
+1882 West Yan'an Road, Changning District, Shanghai 200051, China\par
+\vspace{2pt}
+\href{mailto:yiquntong@dhu.edu.cn}{yiquntong@dhu.edu.cn}
+\quad\textbar\quad
+\href{mailto:yiquntong@gmail.com}{yiquntong@gmail.com}
+\quad\textbar\quad
+\href{https://yiquntong.github.io/}{yiquntong.github.io}\par}
+\vspace{5pt}
+{\hrule height 0.4pt}
+
+\section{Current Position}
+\datedentry{\textbf{Research Assistant Professor}}{November 2026--present}
+Glorious Sun School of Economics and Management, Donghua University
+
+\section{Education}
+\textbf{The Pennsylvania State University}, State College, PA\par
+\datedentry{\hspace*{1.25em}Ph.D. in Economics}{August 2026}
+{\small\hspace*{2.5em}\textit{Committee}\enspace
+Kalyan Chatterjee (chair), Yuhta Ishii, Miaomiao Dong, and Sona Golder\par}
+\datedentry{\hspace*{1.25em}M.A. in Economics}{May 2020}
+\vspace{4pt}
+\textbf{Wuhan University}, Wuhan, China\par
+\datedentry{\hspace*{1.25em}B.A. in Economics and B.S. in Mathematics}{May 2017}
+
+\section{Fields of Interest}
+Microeconomic Theory, Network Economics, Organizational Economics
+
+\section{Working Papers}
+\begin{entries}
+  \item “Shadows of Power: Elite Networks under Authoritarian Purges.”\par
+        {\small Extended abstract forthcoming in \textit{Game Theory for Networks} (Springer).\par}
+  \item “We The People: Supervision Network Design of Institutions” (with Peiran Xiao).
+  \item “Higher-Education Expansion, Upper-Secondary Choice,
+        and Rural--Urban Vocational Attainment” (with Zhejian Wang and Ruoming Zhang).
+  \item “From Seats to Status: China's 1999 Higher-Education Expansion and Urban--Rural
+        Occupational Mobility” (with Zhejian Wang and Ruoming Zhang).
+  \item “Rewarding Community Adaptation: The Community Rating System and Local Government
+        Finances” (with Douglas Noonan and Lilliard Richardson).
+\end{entries}
+
+\section{Work in Progress}
+\begin{entries}
+  \item “Structure and Stability of Political Parties.”
+\end{entries}
+
+\newpage
+
+\section{Presentations}
+\begin{tabularx}{\linewidth}{@{}l@{\hspace{1em}}>{\raggedright\arraybackslash}X@{}}
+  \textbf{2026} & APIOC~(scheduled), APPAM Fall Research Conference (by~coauthor),
+    \mbox{Stony Brook Game Theory Conference}, \mbox{Econometric Society Asia Meeting--China},
+    11th Conference on Network Science in Economics, EAI~GameNets
+\end{tabularx}\par
+
+\section{Fellowships and Awards}
+\datedentry{Best Paper Award, EAI GameNets, for “Shadows of Power”}{2026}
+\datedentry{Humane Studies Fellowship, Institute for Humane Studies}{2025}
+
+\section{Teaching Experience}
+\textbf{Teaching Assistant}, The Pennsylvania State University\par
+\begin{tabularx}{\linewidth}{@{\hspace{1.25em}}>{\raggedright\arraybackslash}X@{\hspace{1em}}r@{}}
+  Decision Making and Strategy & Spring 2025, Fall 2024, Fall 2023 \\
+  Intermediate Microeconomics & Spring 2024, Spring 2023, Fall 2022 \\
+  Intermediate Macroeconomics & Spring 2022, Fall 2021, Spring 2021 \\
+  Introductory Microeconomic Analysis and Policy & Fall 2020
+\end{tabularx}\par
+
+\section{Referee Service}
+\textit{Journal of Flood Risk Management}
+
+\section{Languages and Technical Skills}
+\textit{Languages}\quad Mandarin Chinese (native), English (fluent)\par
+\textit{Computing}\quad Mathematica, MATLAB, Stata, SAS, Python, \LaTeX
+
+\end{document}
